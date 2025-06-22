@@ -1,5 +1,8 @@
 # Charity-Pledge-Report-Analysis-using-Alteryx
 Charity Pledge Report Analysis
+This is a data analysis project focused on understanding charitable giving patterns through pledge data. While this analysis could have been performed using tools like Excel or Python, I chose to use Alteryx due to its intuitive, no-code/low-code interface and powerful data preparation capabilities.
+Alteryx made the entire data cleaning, transformation, and analysis process more efficient and streamlined. I thoroughly enjoyed working on this project and leveraging Alteryx to extract meaningful insights from raw data.
+
 Problem Statement:
 As part of a non-profit organization focused on facilitating charitable giving, we received a System Pledge Report detailing pledges made to various charities. However, this report lacked contextual information about the charities themselves.
 To gain actionable insights, we were tasked with integrating the pledge data with a master Charity Information dataset. The objective was to identify:
@@ -19,7 +22,7 @@ o	Validated and adjusted column data types as appropriate.
 o	Identified incorrect date formatting and corrected it using the DateTime Tool. The new column was renamed, and the old one was removed.
 •	Formula Tool:
 o	Created a conditional formula to handle missing values in the "Gift Type" column. Any null values were interpreted as "Online" donations using:
-if [Gift Type] == Null then "Online" else [Gift Type] endif
+if [Gift Type] = Null then "Online" else [Gift Type] endif
 2. Charity Information
 •	Address Splitting:
 o	The full address field was separated using the Text to Columns Tool, where "+" was the delimiter.
